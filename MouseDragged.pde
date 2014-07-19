@@ -28,28 +28,18 @@ void draw(){
   background(100, 255, 255);
   mover.draw();
 }
-void mousePressed(){
 
+void mousePressed(){
   println("mousePressed");
 }
+
 void mouseDragged(){
   println("mouseDragged");
-  float rx = mouseX ;
-  float ry = mouseY ;
-    
-  float dx = mover.x - rx ;
-  float dy = mover.y - ry ;
-  float d2 = (dx*dx)+(dy*dy);
-
-  if((mover.r * mover.r) > d2){
-   
-    mover.x = mouseX;
-    mover.y = mouseY;
-  }
+  mover.x = mouseX;
+  mover.y = mouseY;
 }
 
 void mouseReleased(){
   println("mouseReleased");
-
 }
 
